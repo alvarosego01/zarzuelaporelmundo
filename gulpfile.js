@@ -44,7 +44,7 @@ gulp.task('browserSync-Server', () => {
     online: true,
     notify: true,
     injectChanges: true,
-    proxy: "https://zarzuelaporelmundo.org/",
+    proxy: "https://zxm.alvarosegovia.com/",
 
   serveStatic: ["assets/css"],
     files: "assets/css/zarzuelaEstilos.css",
