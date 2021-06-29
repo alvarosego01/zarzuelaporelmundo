@@ -1,29 +1,29 @@
-<?php 
+<?php
 
 
-function estilosAdicionales(){
+// function estilosAdicionales(){
 
-    wp_enqueue_style('indexStilos', get_template_directory_uri() . '/../betheme-child/assets/css/zarzuelaEstilos.css', array(), rand(), 'all'); // Enqueue it!
- 
-}add_action('wp_enqueue_scripts', 'estilosAdicionales'); // Add Theme Stylesheet
+//     wp_enqueue_style('indexStilos', get_template_directory_uri() . '/../betheme-child/assets/css/zarzuelaEstilos.css', array(), rand(), 'all'); // Enqueue it!
 
-// // Adicionales javascript
-function scriptsAdicionales(){
-	wp_enqueue_script('jquery');
-	wp_enqueue_script('scriptsAdicionales', get_template_directory_uri() . '/../betheme-child/assets/js/final/funciones.js', array('jquery'), rand(), 'all'); // Enqueue it!
-	 
-	$admin= admin_url( 'admin-ajax.php' );
+// }add_action('wp_enqueue_scripts', 'estilosAdicionales'); // Add Theme Stylesheet
 
-  wp_localize_script(
-    'scriptsAdicionales',
-    's',
-    array(
-        'ajaxurl' => $admin
-     ));
+// // // Adicionales javascript
+// function scriptsAdicionales(){
+// 	wp_enqueue_script('jquery');
+// 	wp_enqueue_script('scriptsAdicionales', get_template_directory_uri() . '/../betheme-child/assets/js/final/funciones.js', array('jquery'), rand(), 'all'); // Enqueue it!
 
-}add_action('wp_enqueue_scripts', 'scriptsAdicionales'); // Add Theme Stylesheet
+// 	$admin= admin_url( 'admin-ajax.php' );
 
- 
+//   wp_localize_script(
+//     'scriptsAdicionales',
+//     's',
+//     array(
+//         'ajaxurl' => $admin
+//      ));
+
+// }add_action('wp_enqueue_scripts', 'scriptsAdicionales'); // Add Theme Stylesheet
+
+
 // function adminAdicionales(){
 // wp_enqueue_script('jquery'); // Enqueue it!
 
@@ -31,7 +31,7 @@ function scriptsAdicionales(){
 
 //     // You need styling for the datepicker. For simplicity I've linked to Google's hosted jQuery UI CSS.
 //     wp_register_style( 'jquery-ui', 'http://code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css' );
-//     wp_enqueue_style( 'jquery-ui' );  
+//     wp_enqueue_style( 'jquery-ui' );
 
 //   wp_register_script('admin-script', get_template_directory_uri() . '/../betheme-child/assets/adminJs/final/adminfunciones.js', array('jquery'),rand(),'all'); // Custom scripts
 //   wp_enqueue_script('admin-script'); // Enqueue it!
@@ -185,12 +185,12 @@ function propuestas( $atts = array() ) {
   if($atts['parametro'] == 'titulo'){
 	return esc_html( get_the_title() );
   }
-  
-  }add_shortcode( 'getpropuestas', 'propuestas' );
-  
-	
 
- 
+  }add_shortcode( 'getpropuestas', 'propuestas' );
+
+
+
+
 
 
 ?>
