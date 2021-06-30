@@ -229,13 +229,14 @@ a.fixed-nav.fixed-nav-next.format-.style-default
 // barraSeparador
 
 
-.seccionInicialHome
+.sectionHome
     hr
         display: none
     .barraSeparador
         margin-bottom: 35px
     h1
         margin-bottom: 25px
+    .contenedorPadre .contenedorTextoTituloSeccion h1
 
 
 
@@ -1010,27 +1011,6 @@ input[type="submit"]
 
 
     div
-        &#seccionHome5 .contenedorPadre .contenedorTextoTituloSeccion h1
-            padding: 0 25px
-
-        &#seccionHome2 .contenedor2
-            padding-left: 100px
-
-        &#seccionHome6Full .contenedor1 .vc_column-inner .contenedorTexto
-            h1
-                text-align: center
-
-            h5
-                text-align: justify
-
-            div div
-                margin: 0 auto 25px
-                width: 120pxs
-
-
-        &.seccionNosotrosHome .contenedor1 .contenedorTexto h5
-            text-align: justify
-
         &#nosotrosQuiereZarzuela .contenedor1 .contenedorTexto h5
             text-align: justify
 
@@ -1288,7 +1268,7 @@ body
 
 div
     &#seccionHome5
-        padding: 80px 10% 60px
+        padding: 50px 10%!important
         .contenedorPadre
             .contenedorTextoTituloSeccion
                 margin-bottom: 50px
@@ -3047,6 +3027,9 @@ body#pageAs-listapropuestas
     .vc_row
         margin-bottom: 0
 
+.seccionNosotrosColaboradores
+    padding-bottom: 25px!important
+
 
 
 #actividadesPremios
@@ -3109,21 +3092,29 @@ body#pageAs-listapropuestas
 
 
 
-
+// aqui estamos
 
 .listaLogos
     .wpb_wrapper
+        .wpb_single_image
+            margin-bottom: 0
+
+.listaLogos.home.apoya
+    // display: none
+    .wpb_wrapper
         display: grid
+        width: 80%
+        margin: 0 auto
         @include responsivo(telefonoTable)
             grid-template-columns: repeat(1,1fr)!important
         @include responsivo(pcMedio)
             grid-template-columns: repeat(2,1fr)!important
         @include responsivo(general)
             // @include centrarLastGrid(3)
-            grid-template-columns: repeat(3,1fr)!important
+            grid-template-columns: repeat(4,1fr)!important
         @include responsivo(resto)
             // @include centrarLastGrid(3)
-            grid-template-columns: repeat(3,1fr)!important
+            grid-template-columns: repeat(4,1fr)!important
             // // grid-template-columns: repeat(4,1fr)!important
             // grid-template-columns: repeat(4,1fr)!important
             // .wpb_single_image.wpb_content_element
@@ -3140,8 +3131,75 @@ body#pageAs-listapropuestas
                 a
                     width: 100%
                     img
+                        // display:
+                        height: 50px!important
                         width: auto
+        .wpb_single_image.wpb_content_element
+            &:nth-of-type(3)
+                img
+                    height: 100px!important
+
+.listaLogos.home.colaboramos
+    .wpb_wrapper
+        display: grid
+        width: 80%
+        margin: 0 auto
+        @include responsivo(telefonoTable)
+            grid-template-columns: repeat(1,1fr)!important
+        @include responsivo(pcMedio)
+            grid-template-columns: repeat(2,1fr)!important
+        @include responsivo(general)
+            // @include centrarLastGrid(3)
+            grid-template-columns: repeat(4,1fr)!important
+        @include responsivo(resto)
+            // @include centrarLastGrid(3)
+            grid-template-columns: repeat(4,1fr)!important
+
+        .wpb_single_image.wpb_content_element
+            display: flex
+            justify-content: center
+            align-items: center
+            figure
+                display: inline-block!important
+                margin: 0
+                width: 100%
+                a
+                    width: 100%
+                    img
+                        width: auto
+                        height: 110px!important
     // display: none
+.listaLogos.home.amigosasoc
+    .wpb_wrapper
+        display: grid
+        width: 80%
+        margin: 0 auto
+        @include responsivo(telefonoTable)
+            grid-template-columns: repeat(1,1fr)!important
+        @include responsivo(pcMedio)
+            grid-template-columns: repeat(2,1fr)!important
+        @include responsivo(general)
+            // @include centrarLastGrid(3)
+            grid-template-columns: repeat(5,1fr)!important
+        @include responsivo(resto)
+            // @include centrarLastGrid(3)
+            grid-template-columns: repeat(5,1fr)!important
+
+        .wpb_single_image.wpb_content_element
+            display: flex
+            justify-content: center
+            align-items: center
+            figure
+                display: inline-block!important
+                margin: 0
+                width: 100%
+                a
+                    width: 100%
+                    img
+                        width: auto
+                        max-height: 110px!important
+
+
 
 div#nosotrosQuiereZarzuela
     .contenedor2
@@ -3216,15 +3274,6 @@ div#nosotrosQuiereZarzuela
                     li
                         img
                             height: 125px
-                            // min-width: 150px!important
-                    // @include responsivo(telefonoTable)
-                    //     grid-template-columns: repeat(1,1fr)!important
 
-                    // @include responsivo(pcMedio)
-                    //     grid-template-columns: repeat(1,1fr)!important
-
-                    // @include responsivo(general)
-                    //     grid-template-columns: repeat(3,1fr)!important
-
-                    // @include responsivo(resto)
-                    //     grid-template-columns: repeat(3,1fr)!important
+.has_content .the_content_wrapper
+    margin: 0!important

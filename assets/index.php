@@ -1,13 +1,13 @@
 <?php
 
 
-// function estilosAdicionales(){
+function estilosAdicionales(){
 
-//     wp_enqueue_style('indexStilos', get_template_directory_uri() . '/../betheme-child/assets/css/zarzuelaEstilos.css', array(), rand(), 'all'); // Enqueue it!
+    wp_enqueue_style('indexStilos', get_template_directory_uri() . '/../betheme-child/assets/css/zarzuelaEstilos.css', array(), rand(), 'all'); // Enqueue it!
 
-// }add_action('wp_enqueue_scripts', 'estilosAdicionales'); // Add Theme Stylesheet
+}add_action('wp_enqueue_scripts', 'estilosAdicionales'); // Add Theme Stylesheet
 
-// // // Adicionales javascript
+// // Adicionales javascript
 // function scriptsAdicionales(){
 // 	wp_enqueue_script('jquery');
 // 	wp_enqueue_script('scriptsAdicionales', get_template_directory_uri() . '/../betheme-child/assets/js/final/funciones.js', array('jquery'), rand(), 'all'); // Enqueue it!
