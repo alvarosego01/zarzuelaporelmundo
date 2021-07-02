@@ -1,0 +1,79 @@
+
+// quitar cosa del focus
+*
+    outline: none!important
+    // display: none
+
+*::focus
+    outline: 0
+
+$desdeT: 320px
+$hastaT: 767px
+
+$desdeM: $hastaT + 1
+$hastaM: 1000px
+
+$desdeG: $hastaM
+$hastaG: $desdeG + 500
+
+@mixin responsivo($media)
+    @if $media == telefonoTable
+        @media only screen and (min-width: $desdeT) and (max-width: $hastaT)
+            @content
+    @else if $media == pcMedio
+        @media only screen and (min-width: $desdeM) and (max-width: $hastaM)
+            @content
+    @else if $media == general
+        @media only screen and (min-width: $desdeG) and (max-width: $hastaG)
+            @content
+    @else if $media == resto
+        @media only screen and (min-width: $hastaG + 1)
+            @content
+
+
+
+// @mixin centrarLastGrid( $columns )
+//     $total_columns: $columns * 2
+//     $span: $total_columns / $columns
+//     $offset: $columns - 1
+//     $nth-child: if( $columns % 2 == 0, 'odd', 'even' )
+//     display: grid
+//     grid-template-columns: repeat( $total_columns, 1fr )
+//     &>*
+//         grid-column: span $span
+//         &:nth-last-child(#{$offset}):nth-child(#{$nth-child})
+//             grid-column: $span / span $span
+
+
+@mixin centrarLastGrid( $columns )
+    $total_columns: $columns * 2
+    $span: $total_columns / $columns
+    $offset: $columns - 1
+    $nth-child: if( $columns % 2 == 0, 'odd', 'even' )
+    display: grid
+    grid-template-columns: repeat($total_columns, 1fr )
+    & > *
+        grid-column: span $span
+        &:nth-last-child(#{$offset}):nth-child(#{$nth-child})
+            grid-column: $span / span $span
+
+
+
+
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p
+    color: white!important
+
+$blackZarzuela: #000
+$redZarzuela: #d33
+
+
+.resalte
+    color: $redZarzuela!important
