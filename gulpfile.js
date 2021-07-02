@@ -69,7 +69,7 @@ gulp.task('sass', () => {
     .pipe(autoprefixer({
       browsers: ['last 10 versions']
     }))
-    // .pipe(csso())
+    .pipe(csso())
     .pipe(gulp.dest('./assets/css'))
     .pipe(browserSync.stream());
 });
@@ -82,7 +82,7 @@ gulp.task('sassGeneral', () => {
     .pipe(autoprefixer({
       browsers: ['last 10 versions']
     }))
-    // .pipe(csso())
+    .pipe(csso())
     .pipe(gulp.dest('./assets/css'))
     .pipe(browserSync.stream());
 });
