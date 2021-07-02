@@ -5,7 +5,7 @@
 
 
 // *
-//     display: none!important
+    // display: none!important
 
 #nosotrosQuiereZarzuela
     padding-bottom: 25px!important
@@ -21,7 +21,12 @@
     h6, span
         font-size: 16px!important
 
-
+.nosotros.consejoDirectivo
+    padding-top: 25px!important
+    padding-bottom: 25px!important
+.nosotros.consejoEjecutivo
+    padding-top: 25px!important
+    padding-bottom: 50px!important
 
 .socialMedia
     br
@@ -81,6 +86,8 @@ div.fontact
 
 #entradasPost
     margin-bottom: 0!important
+    .vc_grid-container.vc_clearfix.wpb_content_element.vc_basic_grid
+        margin-bottom: 0!important
     .vc_grid-item-mini.vc_clearfix
         margin-bottom: 0!important
         .vc_gitem-zone.vc_gitem-zone-c
@@ -92,12 +99,38 @@ div.fontact
     .vc_btn3-container.vc_btn3-left
         display: none
     .vc_gitem-zone.vc_gitem-zone-a.vc-gitem-zone-height-mode-auto.vc-gitem-zone-height-mode-auto-1-1.vc_gitem-is-link
-        max-height: 250px!important
-        background-position: top
+        @include responsivo(general)
+            max-height: 250px!important
+            background-position: center
+
+        @include responsivo(resto)
+            max-height: 250px!important
+            background-position: center
 
 
-//*
- //   display: none
+#entradasPost
+    .vc_grid-container.vc_clearfix.wpb_content_element.vc_basic_grid
+        margin-bottom: 0!important
+    // .vc_pageable-slide-wrapper.vc_clearfix
+    //     .vc_gitem-zone.vc_gitem-zone-a.vc-gitem-zone-height-mode-auto.vc-gitem-zone-height-mode-auto-1-1.vc_gitem-is-link
+    //         background-image: none!important
+    //         &::before
+    //             display: none
+    //         // display: none
+    //         img.vc_gitem-zone-img
+    //             display: block!important
+    //             visibility: visible!important
+    //             max-height: 175px!important
+    //             object-fit: cover
+
+    .vc_gitem-post-data-source-post_title
+        h4
+            font-size: 18px!important
+
+
+
+// *
+//    display: none
 
 #Top_bar
     &.is-sticky
@@ -171,9 +204,6 @@ a.fixed-nav.fixed-nav-next.format-.style-default
             border-bottom: 0
 
 
-
-
-
 .backBlack
     background-color: #000!important
     padding-bottom: 50px!important
@@ -229,7 +259,8 @@ a.fixed-nav.fixed-nav-next.format-.style-default
 // barraSeparador
 
 
-.sectionHome
+.sectionHome,
+.sectionParent
     hr
         display: none
     .barraSeparador
@@ -542,10 +573,19 @@ input[type="submit"]
             border-right: 0!important
             border-top: 1px solid $red
             padding: 25px 0!important
+            @include responsivo(telefonoTable)
+                border-bottom: 1px solid $red
+                margin-bottom: 25px
+
+            @include responsivo(pcMedio)
+                border-bottom: 1px solid $red
+                margin-bottom: 25px
+
             .contenedorOpciones
                 margin-bottom: 0
                 .opcionesActividades
-                    h1
+                    h1,
+                    a
                         text-align: center
 
                     div
@@ -912,7 +952,8 @@ input[type="submit"]
             .contenedorOpciones
                 margin-bottom: 0
                 .opcionesActividades
-                    h1
+                    h1,
+                    a
                         text-align: center
 
                     div
@@ -2333,6 +2374,7 @@ div
         padding-left: 15%
         padding-right: 15%
         background-color: $black!important
+
         .contenedor1
             padding: 60px 50px 60px 0
             .contenedorTexto
@@ -3099,107 +3141,184 @@ body#pageAs-listapropuestas
         .wpb_single_image
             margin-bottom: 0
 
+.listaLogos
+    @include responsivo(telefonoTable)
+        img
+            margin-bottom: 50px
+    @include responsivo(pcMedio)
+        img
+            margin-bottom: 50px
+
 .listaLogos.home.apoya
     // display: none
     .wpb_wrapper
-        display: grid
-        width: 80%
-        margin: 0 auto
-        @include responsivo(telefonoTable)
-            grid-template-columns: repeat(1,1fr)!important
-        @include responsivo(pcMedio)
-            grid-template-columns: repeat(2,1fr)!important
-        @include responsivo(general)
-            // @include centrarLastGrid(3)
-            grid-template-columns: repeat(4,1fr)!important
-        @include responsivo(resto)
-            // @include centrarLastGrid(3)
-            grid-template-columns: repeat(4,1fr)!important
-            // // grid-template-columns: repeat(4,1fr)!important
-            // grid-template-columns: repeat(4,1fr)!important
-            // .wpb_single_image.wpb_content_element
-            //     &:last-child
-            //         grid-column: 5 / span 1
-        .wpb_single_image.wpb_content_element
-            display: flex
-            justify-content: center
-            align-items: center
-            figure
-                display: inline-block!important
-                margin: 0
-                width: 100%
-                a
+        &:not(.vc_figure)
+            display: grid
+            width: 90%
+            margin: 0 auto
+            @include responsivo(telefonoTable)
+                grid-template-columns: repeat(1,1fr)!important
+            @include responsivo(pcMedio)
+                grid-template-columns: repeat(2,1fr)!important
+            @include responsivo(general)
+                // @include centrarLastGrid(3)
+                grid-template-columns: repeat(4,1fr)!important
+            @include responsivo(resto)
+                // @include centrarLastGrid(3)
+                grid-template-columns: repeat(4,1fr)!important
+                // // grid-template-columns: repeat(4,1fr)!important
+                // grid-template-columns: repeat(4,1fr)!important
+                // .wpb_single_image.wpb_content_element
+                //     &:last-child
+                //         grid-column: 5 / span 1
+            .wpb_single_image.wpb_content_element
+                display: flex
+                justify-content: center
+                align-items: center
+                figure
+                    display: inline-block!important
+                    margin: 0
                     width: 100%
+                    a
+                        width: 100%
+                        img
+                            // display:
+                            height: 65px!important
+                            width: auto
+            .wpb_single_image.wpb_content_element
+                &:nth-of-type(3)
                     img
-                        // display:
-                        height: 50px!important
-                        width: auto
-        .wpb_single_image.wpb_content_element
-            &:nth-of-type(3)
-                img
-                    height: 100px!important
+                        height: 100px!important
 
 .listaLogos.home.colaboramos
     .wpb_wrapper
-        display: grid
-        width: 80%
-        margin: 0 auto
-        @include responsivo(telefonoTable)
-            grid-template-columns: repeat(1,1fr)!important
-        @include responsivo(pcMedio)
-            grid-template-columns: repeat(2,1fr)!important
-        @include responsivo(general)
-            // @include centrarLastGrid(3)
-            grid-template-columns: repeat(4,1fr)!important
-        @include responsivo(resto)
-            // @include centrarLastGrid(3)
-            grid-template-columns: repeat(4,1fr)!important
+        &:not(.vc_figure)
+            display: grid
+            width: 90%
+            margin: 0 auto
+            @include responsivo(telefonoTable)
+                grid-template-columns: repeat(1,1fr)!important
+            @include responsivo(pcMedio)
+                grid-template-columns: repeat(2,1fr)!important
+            @include responsivo(general)
+                // @include centrarLastGrid(3)
+                grid-template-columns: repeat(4,1fr)!important
+            @include responsivo(resto)
+                // @include centrarLastGrid(3)
+                grid-template-columns: repeat(4,1fr)!important
 
-        .wpb_single_image.wpb_content_element
-            display: flex
-            justify-content: center
-            align-items: center
-            figure
-                display: inline-block!important
-                margin: 0
-                width: 100%
-                a
+            .wpb_single_image.wpb_content_element
+                display: flex
+                justify-content: center
+                align-items: center
+                figure
+                    display: inline-block!important
+                    margin: 0
                     width: 100%
-                    img
-                        width: auto
-                        height: 110px!important
+                    a
+                        width: 100%
+                        img
+                            width: auto
+                            height: 110px!important
     // display: none
 .listaLogos.home.amigosasoc
     .wpb_wrapper
-        display: grid
-        width: 80%
-        margin: 0 auto
-        @include responsivo(telefonoTable)
-            grid-template-columns: repeat(1,1fr)!important
-        @include responsivo(pcMedio)
-            grid-template-columns: repeat(2,1fr)!important
-        @include responsivo(general)
-            // @include centrarLastGrid(3)
-            grid-template-columns: repeat(5,1fr)!important
-        @include responsivo(resto)
-            // @include centrarLastGrid(3)
-            grid-template-columns: repeat(5,1fr)!important
+        &:not(.vc_figure)
+            display: grid
+            width: 90%
+            margin: 0 auto
+            @include responsivo(telefonoTable)
+                grid-template-columns: repeat(1,1fr)!important
+            @include responsivo(pcMedio)
+                grid-template-columns: repeat(2,1fr)!important
+            @include responsivo(general)
+                // @include centrarLastGrid(3)
+                grid-template-columns: repeat(5,1fr)!important
+            @include responsivo(resto)
+                // @include centrarLastGrid(3)
+                grid-template-columns: repeat(5,1fr)!important
 
-        .wpb_single_image.wpb_content_element
-            display: flex
-            justify-content: center
-            align-items: center
-            figure
-                display: inline-block!important
-                margin: 0
-                width: 100%
-                a
+            .wpb_single_image.wpb_content_element
+                display: flex
+                justify-content: center
+                align-items: center
+                figure
+                    display: inline-block!important
+                    margin: 0
                     width: 100%
+                    a
+                        width: 100%
+                        img
+                            width: auto
+                            max-height: 110px!important
+
+.listaLogos.nosotros.colaboradores
+    // display: none
+    .wpb_wrapper
+        &:not(.vc_figure)
+            display: grid
+            width: 90%
+            margin: 0 auto
+            @include responsivo(telefonoTable)
+                grid-template-columns: repeat(1,1fr)!important
+            @include responsivo(pcMedio)
+                grid-template-columns: repeat(2,1fr)!important
+            @include responsivo(general)
+                grid-template-columns: repeat(3,1fr)!important
+            @include responsivo(resto)
+                // display: none!important
+                grid-template-columns: repeat(3,1fr)!important
+                // @include centrarLastGrid(6)
+            .wpb_single_image
+                display: flex
+                justify-content: center
+                align-items: center
+                margin-bottom: 25px
+                figure
+                    display: inline-block!important
+                    margin: 0
+                    width: 100%
+                    a
+                        width: 100%
                     img
                         width: auto
+                        // height: 75px!important
+                        // display: none
                         max-height: 110px!important
 
 
+
+.listaLogos.actividades.mas
+    margin-top: 25px
+    h5
+        margin-bottom: 25px
+    ul
+        margin: 15px 0
+        display: flex!important
+        flex-flow: wrap
+        justify-content: space-between
+        flex-direction: row
+        list-style: none
+
+
+        li
+            list-style: none
+            cursor: pointer
+            width: fit-content!important
+            text-align: center
+            a
+                width: 100%!important
+                text-align: center!important
+                color: $white!important
+                text-decoration: none
+                transition: all .2s ease-in-out
+                &:hover
+                    color: $red!important
+
+        img
+            margin: 5px auto
+            display: block
+            height: 100px!important
 
 div#nosotrosQuiereZarzuela
     .contenedor2
@@ -3277,3 +3396,53 @@ div#nosotrosQuiereZarzuela
 
 .has_content .the_content_wrapper
     margin: 0!important
+
+
+#seccionActividades1
+    .contenedor1
+        @include responsivo(telefonoTable)
+            border-bottom: 1px solid red
+            margin-bottom: 25px
+        @include responsivo(pcMedio)
+            border-bottom: 1px solid red
+            margin-bottom: 25px
+    .opcionesActividades
+        a
+            width: 100%!important
+            display: block
+            @include responsivo(telefonoTable)
+                text-align: center!important
+            @include responsivo(pcMedio)
+                text-align: center!important
+
+body#pageAs-nosotros
+    #nosotrosQuiereZarzuela,
+    div#nosotrosSobreNosotros,
+    div#seccionNosotrosTribunal,
+    div#seccionHome4,
+    div#seccionNosotrosColaboradores,
+    .nosotros.consejoEjecutivo
+        padding-left: 15%
+        padding-right: 15%
+        @include responsivo(telefonoTable)
+            padding: 50px 5%!important
+        @include responsivo(pcMedio)
+            padding: 50px 10%!important
+
+
+div#seccionHome5
+    .vc_gitem-zone.vc_gitem-zone-a.vc-gitem-zone-height-mode-auto.vc-gitem-zone-height-mode-auto-1-1.vc_gitem-is-link
+        @include responsivo(telefonoTable)
+            height: auto!important
+            background-size: contain
+        @include responsivo(pcMedio)
+            height: auto!important
+            background-size: contain
+
+
+.seccionNosotrosHome
+    .contenedor1
+        @include responsivo(telefonoTable)
+            padding: 25px 0!important
+        @include responsivo(pcMedio)
+            padding: 25px 0!important

@@ -39,20 +39,20 @@ gulp.task('browserSync-Server', () => {
 
   browserSync.init({
     logPrefix: "Zarzuela",
-    open: true,
+    open: false,
     https: true,
     online: true,
     notify: true,
     injectChanges: true,
     proxy: "https://zarzuelaporelmundo.org/",
 
-  serveStatic: ["assets/css"],
-    files: "assets/css/zarzuelaEstilos.css",
+    serveStatic: ["assets/css"],
+    files: "assets/css/stylesZarz.css",
     snippetOptions: {
         rule: {
             match: /<\/head>/i,
             fn: function (snippet, match) {
-                return '<link rel="stylesheet" type="text/css" href="/zarzuelaEstilos.css"/>' + snippet + match;
+                return '<link rel="stylesheet" type="text/css" href="/stylesZarz.css"/>' + snippet + match;
             }
         }
     }
@@ -69,7 +69,7 @@ gulp.task('sass', () => {
     .pipe(autoprefixer({
       browsers: ['last 10 versions']
     }))
-    .pipe(csso())
+    // .pipe(csso())
     .pipe(gulp.dest('./assets/css'))
     .pipe(browserSync.stream());
 });
@@ -82,7 +82,7 @@ gulp.task('sassGeneral', () => {
     .pipe(autoprefixer({
       browsers: ['last 10 versions']
     }))
-    .pipe(csso())
+    // .pipe(csso())
     .pipe(gulp.dest('./assets/css'))
     .pipe(browserSync.stream());
 });
