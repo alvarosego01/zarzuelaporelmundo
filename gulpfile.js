@@ -22,8 +22,8 @@ gulp.task('browserSync-Local', () => {
 
   browserSync.init({
     logPrefix: "zarzuela",
-    open: false,
-    // http: true,
+    open: true,
+    http: true,
     // online: true,
     notify: true,
     injectChanges: true,
