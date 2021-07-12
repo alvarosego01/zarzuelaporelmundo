@@ -7,6 +7,12 @@
 // *
     // display: none!important
 
+
+#Wrapper, .with_aside .content_wrapper
+    max-width: unset!important
+    width: 100%!important
+
+
 #nosotrosQuiereZarzuela
     padding-bottom: 25px!important
 #nosotrosSobreNosotros
@@ -206,8 +212,8 @@ a.fixed-nav.fixed-nav-next.format-.style-default
 
 .backBlack
     background-color: #000!important
-    padding-bottom: 50px!important
-    padding-top: 50px!important
+    padding-bottom: 25px
+    padding-top: 25px
     .vc_column-inner,
     .wpb_wrapper,
     .contenedorTexto
@@ -224,8 +230,8 @@ a.fixed-nav.fixed-nav-next.format-.style-default
 
 .backRed
     background-color: $redZarzuela!important
-    padding-bottom: 50px!important
-    padding-top: 50px!important
+    padding-bottom: 25px
+    padding-top: 25px
     .vc_column-inner,
     .wpb_wrapper,
     .contenedorTexto
@@ -282,8 +288,8 @@ input[type="submit"]
         background-color: $redZarzuela!important
 
 .seccionNosotrosHome
-    padding-left: 10%!important
-    padding-right: 10%!important
+    padding-left: 15%!important
+    padding-right: 15%!important
 
 .type2.seccionNosotrosHome
     // padding-left: 0!important
@@ -434,7 +440,7 @@ input[type="submit"]
 
 
         &#seccionHome2 .contenedor2
-            padding: 50px 10%
+            padding: 50px 15%
             background-color: $black_80
 
         &#seccionHome6Full .contenedor1 .vc_column-inner .contenedorTexto
@@ -459,7 +465,7 @@ input[type="submit"]
             -webkit-flex-direction: column!important
             -ms-flex-direction: column!important
             flex-direction: column!important
-            margin: 0 10%!important
+            margin: 0 15%!important
             .contenedor1
                 width: 100%!important
 
@@ -771,7 +777,7 @@ input[type="submit"]
             -webkit-flex-direction: column
             -ms-flex-direction: column
             flex-direction: column
-            padding: 60px 10% 0
+            padding: 60px 15% 0
             .contenedor1
                 width: 100%
                 div.vc_column-inner
@@ -809,7 +815,7 @@ input[type="submit"]
 
 
         &#seccionHome2 .contenedor2
-            padding: 50px 10%
+            padding: 50px 15%
             background-color: $black_80
             width: 100%!important
 
@@ -835,7 +841,7 @@ input[type="submit"]
             -webkit-flex-direction: column!important
             -ms-flex-direction: column!important
             flex-direction: column!important
-            margin: 0 10%!important
+            margin: 0 15%!important
             .contenedor1
                 width: 100%!important
 
@@ -1309,7 +1315,7 @@ body
 
 div
     &#seccionHome5
-        padding: 50px 10%!important
+        padding: 50px 15%!important
         .contenedorPadre
             .contenedorTextoTituloSeccion
                 margin-bottom: 50px
@@ -1587,7 +1593,7 @@ div
 
 
     &#seccionHome4
-        padding: 60px 10%
+        padding: 60px 15%
         background-color: $black
         .contenedorPadreInvitados
             .contenedorTituloTribunal
@@ -1681,7 +1687,7 @@ div
 
     &#seccionHomeContacto,
     &.seccionHomeContacto
-        padding: 0 10%
+        padding: 0 15%
         background-color: $black
         h1
             font-size: 35px
@@ -1707,7 +1713,7 @@ div
         display: -webkit-flex
         display: -ms-flexbox
         display: flex
-        padding-left: 10%
+        padding-left: 15%
         .contenedor1
             padding: 60px 50px 60px 0
             .contenedorTexto
@@ -2453,7 +2459,7 @@ div
 
 
     &#seccionNosotrosTribunal
-        padding: 60px 10%
+        padding: 60px 15%
         background-color: $black
         .contenedorPadreInvitados
             .contenedorInvitados1
@@ -2567,7 +2573,7 @@ div
     display: -ms-flexbox
     display: flex
     width: 100%
-    padding: 60px 10%
+    padding: 60px 15%
     .contenedor2
         .contenedorActividades
             .vc_tta-panels
@@ -2721,7 +2727,7 @@ div
 
 
 .contenedorRegular
-    padding: 60px 10%
+    padding: 60px 15%
     background-color: $black
     .contenedorPadreInvitados
         .contenedorTituloTribunal
@@ -3064,14 +3070,15 @@ body#pageAs-listapropuestas
 
 
 #seccionNosotrosColaboradores
-    padding: 25px 10%
+    padding: 25px 15%
     background-color: $black
     .vc_row
         margin-bottom: 0
 
-.seccionNosotrosColaboradores
-    padding-bottom: 25px!important
-
+body#pageAs-home
+    .seccionNosotrosColaboradores
+        padding-top: 50px!important
+        padding-bottom: 50px!important
 
 
 #actividadesPremios
@@ -3153,24 +3160,24 @@ body#pageAs-listapropuestas
     // display: none
     .wpb_wrapper
         &:not(.vc_figure)
-            display: grid
-            width: 90%
+            // display: grid
+            width: 80%
             margin: 0 auto
+            display: grid
+            .wpb_single_image.wpb_content_element
+                margin: 25px
             @include responsivo(telefonoTable)
                 grid-template-columns: repeat(1,1fr)!important
             @include responsivo(pcMedio)
                 grid-template-columns: repeat(2,1fr)!important
             @include responsivo(general)
+                @include centrarLastGrid(2)
                 // @include centrarLastGrid(3)
-                grid-template-columns: repeat(4,1fr)!important
-            @include responsivo(resto)
-                // @include centrarLastGrid(3)
-                grid-template-columns: repeat(4,1fr)!important
-                // // grid-template-columns: repeat(4,1fr)!important
                 // grid-template-columns: repeat(4,1fr)!important
-                // .wpb_single_image.wpb_content_element
-                //     &:last-child
-                //         grid-column: 5 / span 1
+            @include responsivo(resto)
+                @include centrarLastGrid(2)
+            //     grid-template-columns: repeat(4,1fr)!important
+
             .wpb_single_image.wpb_content_element
                 display: flex
                 justify-content: center
@@ -3183,29 +3190,61 @@ body#pageAs-listapropuestas
                         width: 100%
                         img
                             // display:
-                            height: 65px!important
+                            height: 75px!important
                             width: auto
             .wpb_single_image.wpb_content_element
-                &:nth-of-type(3)
-                    img
-                        height: 100px!important
+                @include responsivo(general)
+                    &:nth-of-type(1)
+                        img
+                            height: 50px!important
+                    &:nth-of-type(2)
+                        img
+                            height: 50px!important
+                    &:nth-of-type(3)
+                        img
+                            height: 125px!important
+                    &:nth-of-type(4)
+                        img
+                            height: 75px!important
+
+
+                @include responsivo(resto)
+                    &:nth-of-type(1)
+                        img
+                            height: 75px!important
+                    &:nth-of-type(2)
+                        img
+                            height: 50px!important
+                    &:nth-of-type(3)
+                        img
+                            height: 125px!important
+                    &:nth-of-type(4)
+                        img
+                            height: 75px!important
+
 
 .listaLogos.home.colaboramos
     .wpb_wrapper
         &:not(.vc_figure)
-            display: grid
-            width: 90%
+            // display: grid
+            width: 80%
             margin: 0 auto
+            display: grid
+            // flex-flow: wrap
+            // justify-content: space-evenly
+            .wpb_single_image.wpb_content_element
+                margin: 25px
             @include responsivo(telefonoTable)
                 grid-template-columns: repeat(1,1fr)!important
             @include responsivo(pcMedio)
                 grid-template-columns: repeat(2,1fr)!important
             @include responsivo(general)
+                @include centrarLastGrid(2)
                 // @include centrarLastGrid(3)
-                grid-template-columns: repeat(4,1fr)!important
+                // grid-template-columns: repeat(4,1fr)!important
             @include responsivo(resto)
-                // @include centrarLastGrid(3)
-                grid-template-columns: repeat(4,1fr)!important
+                @include centrarLastGrid(2)
+            //     grid-template-columns: repeat(4,1fr)!important
 
             .wpb_single_image.wpb_content_element
                 display: flex
@@ -3219,14 +3258,26 @@ body#pageAs-listapropuestas
                         width: 100%
                         img
                             width: auto
-                            height: 110px!important
+                            height: 125px!important
+
     // display: none
 .listaLogos.home.amigosasoc
     .wpb_wrapper
         &:not(.vc_figure)
-            display: grid
-            width: 90%
+            width: 80%
             margin: 0 auto
+            display: grid
+            // flex-flow: wrap
+            // justify-content: space-evenly
+            .wpb_single_image.wpb_content_element
+                margin: 25px
+            // @include responsivo(telefonoTable)
+                // display: grid
+                // grid-template-columns: repeat(1,1fr)!important
+            // @include responsivo(pcMedio)
+                // display: grid
+                // grid-template-columns: repeat(2,1fr)!important
+
             @include responsivo(telefonoTable)
                 grid-template-columns: repeat(1,1fr)!important
             @include responsivo(pcMedio)
@@ -3235,8 +3286,8 @@ body#pageAs-listapropuestas
                 // @include centrarLastGrid(3)
                 grid-template-columns: repeat(5,1fr)!important
             @include responsivo(resto)
-                // @include centrarLastGrid(3)
-                grid-template-columns: repeat(5,1fr)!important
+                @include centrarLastGrid(2)
+                // grid-template-columns: repeat(3,1fr)!important
 
             .wpb_single_image.wpb_content_element
                 display: flex
@@ -3320,15 +3371,15 @@ body#pageAs-listapropuestas
             display: block
             height: 100px!important
 
-div#nosotrosQuiereZarzuela
-    .contenedor2
-        .wpb_single_image.wpb_content_element
-            figure
+// div#nosotrosQuiereZarzuela
+    // .contenedor2
+        // .wpb_single_image.wpb_content_element
+            // figure
 
 
 
 #idEspecial
-    padding: 0 10%
+    padding: 0 15%
     background-color: black
     h1
         font-size: 35px
@@ -3431,6 +3482,8 @@ body#pageAs-nosotros
 
 
 div#seccionHome5
+    padding-top: 75px!important
+    padding-bottom: 25px!important
     .vc_gitem-zone.vc_gitem-zone-a.vc-gitem-zone-height-mode-auto.vc-gitem-zone-height-mode-auto-1-1.vc_gitem-is-link
         @include responsivo(telefonoTable)
             height: auto!important
@@ -3441,6 +3494,7 @@ div#seccionHome5
 
 
 .seccionNosotrosHome
+    padding-bottom: 50px
     .contenedor1
         @include responsivo(telefonoTable)
             padding: 25px 0!important
@@ -3499,3 +3553,185 @@ body.post-template-default.single.single-post.single-format-standard
 
     .post-wrapper-content
         padding: 75px 0
+
+
+.contenedorTexto
+    padding-left: 0!important
+    padding-right: 0!important
+
+.seccionHomeContacto
+    padding-top: 50px!important
+    padding-bottom: 50px!important
+
+
+// .wpb_column.vc_column_container
+//     padding-left: 5%
+//     padding-right: 5%
+
+
+.vc_column_container.contenedor1
+    @include responsivo(telefonoTable)
+        padding-left: 5%
+        padding-right: 5%
+    @include responsivo(pcMedio)
+        padding-left: 5%
+        padding-right: 5%
+    @include responsivo(general)
+        padding-right: 5%
+    @include responsivo(resto)
+        padding-right: 5%
+.vc_column_container.contenedor2
+    @include responsivo(telefonoTable)
+        padding-left: 5%
+        padding-right: 5%
+    @include responsivo(pcMedio)
+        padding-left: 5%
+        padding-right: 5%
+    @include responsivo(general)
+        padding-left: 5%
+    @include responsivo(resto)
+        padding-left: 5%
+
+
+
+.containerCustom.articlesSlideshow
+    max-width: unset
+    width: 100%
+    @include responsivo(telefonoTable)
+        padding-left: 0
+        padding-right: 0
+
+    @include responsivo(pcMedio)
+        padding-left: 0
+        padding-right: 0
+
+    @include responsivo(general)
+        padding-left: 0
+        padding-right: 0
+
+    @include responsivo(resto)
+        padding-left: 2.5%
+        padding-right: 2.5%
+
+    .sectionParent1
+        #carouselPost
+            margin: 25px 0
+            position: relative
+            ol.carousel-indicators
+                position: absolute
+                bottom: 0
+                left: 0
+                right: 0
+                li
+
+            div.carousel-inner
+                .carousel-item
+                    // display: flex
+                    .element
+                        // height: fit-content
+                        background-color: transparent
+                        padding: 0
+                        padding: 15px
+                        float: left
+                        .card
+                            padding-bottom: 0
+                            height: 100%
+                            border: 0
+                            @include responsivo(telefonoTable)
+                                width: 90%
+                                margin: 0 auto
+                            @include responsivo(pcMedio)
+                                width: 50%
+                                margin: 0 auto
+                            a
+                                text-decoration: none
+                                height: 100%
+                                padding: 0
+                                transition: all 0.2s ease-in-out
+                                .image
+                                    display: flex
+                                    flex-direction: column
+                                    overflow: hidden
+                                    margin-bottom: 15px
+                                    img
+                                        // height: 250px
+                                        width: 100%
+                                        object-fit: cover
+                                        object-position: top
+                                        margin: 0 auto
+                                        @include responsivo(telefonoTable)
+                                            height: 225px
+
+                                        @include responsivo(pcMedio)
+                                            height: 250px
+
+                                        @include responsivo(general)
+                                            height: 200px
+
+                                        @include responsivo(resto)
+                                            height: 250px
+
+                                .group
+                                    padding-left: 10px
+                                    padding-right: 10px
+                                    padding-bottom: 15px
+                                    @include responsivo(general)
+                                        padding-left: 0px
+                                        padding-right: 0px
+                                    @include responsivo(resto)
+                                        padding-left: 5px
+                                        padding-right: 5px
+                                    h2
+                                        // font-size: 18px
+                                        line-height: 20px
+                                        text-align: center
+                                        color: black!important
+                                        margin-bottom: 0
+                                        transition: all 0.2s ease-in-out
+                                        @include responsivo(telefonoTable)
+                                            font-size: 15px
+
+                                        @include responsivo(pcMedio)
+                                            font-size: 15px
+
+                                        @include responsivo(general)
+                                            font-size: 16px
+
+                                        @include responsivo(resto)
+                                            font-size: 16px
+
+                                &:hover
+                                    .group
+                                        h2
+                                            color: $redZarzuela!important
+            .controlsSlideshow
+                display: flex
+                justify-content: space-between
+                // align-content: flex-start
+                margin-top: 25px
+                button
+                    border: 0!important
+                    position: absolute
+                    padding: 25px!important
+                    width: fit-content!important
+                    color: white
+                    font-size: 22px
+                    &:hover
+                        color: $redZarzuela
+                        background-color: transparent!important
+                button.carousel-control-prev
+                    left: -75px
+                button.carousel-control-next
+                    right: -75px
+
+
+
+
+
+                    // display: none
+
+
+
+
+
+
