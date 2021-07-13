@@ -21,21 +21,29 @@ function entradasBlogCustom($atts = array())
       $l = array();
     }
 
-    if ($i <= 1) {
+    if ($i <= 3) {
 
       array_push($l, $value);
     }
 
 
-    if (count($l) == 2) {
+    if (count($l) == 4) {
 
       array_push($arts, $l);
-
+      $l = array();
       $i = 0;
     } else {
 
       $i++;
     }
+
+
+    if ($value === end($posts->posts) && count($l) > 0) {
+
+      array_push($arts, $l);
+
+    }
+
   }
 
 ?>
