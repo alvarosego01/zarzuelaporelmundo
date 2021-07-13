@@ -60,7 +60,7 @@ function entradasBlogCustom($atts = array())
 
           <?php
           foreach ($arts as $index => $item) { ?>
-            <div class="carousel-item row <?php if ($index === array_key_first($arts)) echo 'active' ?> ">
+            <div class="carousel-item row row-flex <?php if ($index === array_key_first($arts)) echo 'active' ?> ">
 
 
               <?php

@@ -12,6 +12,13 @@
     max-width: unset!important
     width: 100%!important
 
+// #Wrapper, #Content
+    // background-color: #3b3b3b
+
+
+// *
+    // display: none!important
+
 
 #nosotrosQuiereZarzuela
     padding-bottom: 25px!important
@@ -2566,14 +2573,14 @@ div
 
 
 #seccionActividades1
-    margin-top: 80px
-    margin-bottom: 80px
     display: -webkit-box
     display: -webkit-flex
     display: -ms-flexbox
     display: flex
     width: 100%
-    padding: 60px 15%
+    padding: 75px 15%
+    // padding: 60px 15%
+
     .contenedor2
         .contenedorActividades
             .vc_tta-panels
@@ -3622,7 +3629,6 @@ body.post-template-default.single.single-post.single-format-standard
                 bottom: 0
                 left: 0
                 right: 0
-                li
 
             div.carousel-inner
                 .carousel-item
@@ -3633,6 +3639,7 @@ body.post-template-default.single.single-post.single-format-standard
                         padding: 0
                         padding: 15px
                         float: left
+                        // height: 100%
                         .card
                             padding-bottom: 0
                             height: 100%
@@ -3726,8 +3733,40 @@ body.post-template-default.single.single-post.single-format-standard
 
 
 
+.row-flex.active,
+.carousel-item-next
+    display: flex!important
+    flex-wrap: wrap!important
 
 
+
+body#pageAs-home
+    .seccionNosotrosHome.form
+        padding-bottom: 75px
+        .contenedor2
+            display: flex
+            // @include responsivo(general)
+                // padding-right: 15px
+            // @include responsivo(resto)
+                // padding-right: 15px
+            .vc_column-inner
+                margin: 0
+                display: flex
+                justify-content: center
+                align-content: center
+                align-items: center
+                .wpb_wrapper
+                    // margin: auto 0
+                    height: fit-content
+                .wpb_single_image.wpb_content_element.vc_align_center
+                    margin: 0
+                .vc_single_image-wrapper.vc_box_border_grey
+                    margin-bottom: 0
+
+        input.wpcf7-form-control.wpcf7-submit
+            margin: 25px 0
+            padding: 10px 35px!important
+            color: white!important
                     // display: none
 
 
