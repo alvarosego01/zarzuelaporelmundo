@@ -3645,7 +3645,7 @@ body.post-template-default.single.single-post.single-format-standard
                             height: 100%
                             border: 0
                             @include responsivo(telefonoTable)
-                                width: 90%
+                                width: 100%
                                 margin: 0 auto
                             @include responsivo(pcMedio)
                                 width: 50%
@@ -3667,16 +3667,16 @@ body.post-template-default.single.single-post.single-format-standard
                                         object-position: top
                                         margin: 0 auto
                                         @include responsivo(telefonoTable)
-                                            height: 225px
+                                            height: max(300px, 50vw)
 
                                         @include responsivo(pcMedio)
-                                            height: 250px
+                                            height: 300px
 
                                         @include responsivo(general)
-                                            height: 250px
+                                            height: 225px
 
                                         @include responsivo(resto)
-                                            height: 300px
+                                            height: 275px
 
                                 .group
                                     padding-left: 10px
