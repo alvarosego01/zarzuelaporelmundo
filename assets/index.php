@@ -3,8 +3,8 @@
 
 function estilosAdicionales(){
 
-    // wp_enqueue_style('indexStilos', get_template_directory_uri() . '/../betheme-child/assets/css/zarzuelaEstilos.css', array(), rand(), 'all'); // Enqueue it!
-    wp_enqueue_style('indexStilos', get_template_directory_uri() . '/../betheme-child/assets/css/stylesZarz.css', array(), rand(), 'all'); // Enqueue it!
+    wp_enqueue_style('indexStilos', get_template_directory_uri() . '/../betheme-child/assets/css/zarzuelaEstilos.css', array(), rand(), 'all'); // Enqueue it!
+    // wp_enqueue_style('indexStilos', get_template_directory_uri() . '/../betheme-child/assets/css/stylesZarz.css', array(), rand(), 'all'); // Enqueue it!
 
 
 	wp_register_style('bootstrapCss', get_template_directory_uri() . '/../betheme-child/assets/bootstrap/dist/css/bootstrap.min.css', array(), rand(), 'all');
